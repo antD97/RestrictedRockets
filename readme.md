@@ -1,14 +1,14 @@
 # Restricted Rockets
 
-[Downloads](https://github.com/antD97/DeathCurse/releases) |
-[Planet Minecraft](https://www.planetminecraft.com/data-pack/death-curse/)
+[Planet Minecraft](https://www.planetminecraft.com/data-pack/death-curse/) |
+[Video Demo](https://www.youtube.com/watch?v=o38_oSvvLmc) |
+[Downloads](https://github.com/antD97/DeathCurse/releases)
 
-
-Restricted Rockets is a Minecraft datapack that allows you to restrict how many rockets you can use
-while flying with an elytra before having to land again. Once you've gone over the maximum amount of
-rockets, you will immediately stop flying and won't be able to fly again until you land. If you land
-in water, you'll have to stop moving to reset the rocket counter. See Operator Commands below on how
-to set the max rockets value
+Restricted Rockets is a simple datapack that allows you to restrict how many rockets players can use
+while flying with an elytra before having to land again. Once a player uses more than the maximum
+amount of rockets, they will immediately stop flying and won't be able to fly again until they land.
+Players can either land or be still in water to reset their rockets preemptively. See Operator
+Commands below on how to set the max rockets value.
 
 ## Building
 
