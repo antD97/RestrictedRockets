@@ -1,0 +1,4 @@
+{
+    "function": "set_nbt",
+    "tag": "{restricted_rockets_repairable: 1b}"
+}
