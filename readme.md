@@ -1,8 +1,8 @@
 # Restricted Rockets
 
-[Planet Minecraft](https://www.planetminecraft.com/data-pack/death-curse/) |
+[Planet Minecraft](https://www.planetminecraft.com/data-pack/restricted-rockets-5611086/) |
 [Video Demo](https://www.youtube.com/watch?v=o38_oSvvLmc) |
-[Downloads](https://github.com/antD97/DeathCurse/releases)
+[Downloads](https://github.com/antD97/RestrictedRockets/releases)
 
 Restricted Rockets is a simple datapack that allows you to restrict how many rockets players can use
 while flying with an elytra before having to land again. Once a player uses more than the maximum
