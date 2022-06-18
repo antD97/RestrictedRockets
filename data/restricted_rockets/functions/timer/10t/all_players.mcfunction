@@ -3,6 +3,19 @@
 
 # execute as each player every 10t (0.5s)
 
+# --- dead --- #
+
+execute as @s[scores={__time_alive=0}] run function __:timer/1t/all_players/dead
+{
+    # reset rockets
+    scoreboard players set @s __rockets_used_while_flying 0
+
+    # kill player lock
+    #!sb global __temp1 = @s __id
+    execute as @e[type=armor_stand,tag=__player_lock] run execute if score @s __id = global __temp1 run kill @s
+    scoreboard players set @s __summoned_player_lock 0
+}
+
 # --- reset rockets used counter --- #
 
 execute as @s[scores={__rockets_used_while_flying=1..}] run function __:timer/1t/all_players/resettable
@@ -30,7 +43,6 @@ execute as @s[scores={__rockets_used_while_flying=1..}] run function __:timer/1t
             {
                 #!sb global __temp1 = @s __id
                 execute as @e[type=armor_stand,tag=__player_lock] run execute if score @s __id = global __temp1 run kill @s
-
                 scoreboard players set @s __summoned_player_lock 0
             }
         }

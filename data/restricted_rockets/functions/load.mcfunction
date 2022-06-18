@@ -27,6 +27,9 @@ scoreboard objectives add __clear_levitation dummy
 scoreboard objectives add __summoned_player_lock dummy
 scoreboard objectives add __age dummy
 
+# used to kill player locks
+scoreboard objectives add __time_alive minecraft.custom:minecraft.time_since_death
+
 # temporary values
 scoreboard objectives add __temp1 dummy
 scoreboard objectives add __temp2 dummy
