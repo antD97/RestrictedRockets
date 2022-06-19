@@ -1,7 +1,7 @@
 # Restricted Rockets
 
 [Planet Minecraft](https://www.planetminecraft.com/data-pack/restricted-rockets-5611086/) |
-[Video Demo](TODO) |
+[Video Demo](https://www.youtube.com/watch?v=W3TiHul3lkM) |
 [Downloads](https://github.com/antD97/RestrictedRockets/releases)
 
 Restricted Rockets is a simple datapack that allows you to restrict how many rockets players can use
