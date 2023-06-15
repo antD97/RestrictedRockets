@@ -36,5 +36,5 @@ the datapack is reloaded, the datapack will run like it did the first time.
 Sets the number of rockets a player can use before landing to \<x>. Default is 0.
 
 ---
-Copyright © 2022 antD97  
+Copyright © 2022-2023 antD97  
 Licensed under the [MIT License](LICENSE)
