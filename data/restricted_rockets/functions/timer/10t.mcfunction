@@ -6,6 +6,19 @@ schedule function __:timer/10t 10t
 
 execute as @a run function __:timer/10t/all_players
 {
+    # enable triggers
+    #!sb enable @s __max_rockets
+    #!sb enable @s __override_max_rockets
+    #!sb enable @s __safe_elytra_break
+    #!sb enable @s __override_safe_elytra_break
+    #!sb enable @s __display
+    #!sb enable @s __override_display
+
+    # config trigger
+    execute if score @s __config matches 1 run function __:player_config
+    #!sb enable @s __config
+    #!sb @s __config = 0
+
     # on ground
     execute as @s[nbt={OnGround:1b}] run function __:reset_flight
 

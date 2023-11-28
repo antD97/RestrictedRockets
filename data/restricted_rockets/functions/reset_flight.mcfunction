@@ -6,13 +6,20 @@
 # if enough time has passed since flight was cancelled
 execute as @s[scores={__time_since_cancelled=4..}] run function __:reset_flight/time_passed
 {
+    #!sb @s __time_flying = 0
+
     # reset rockets
     execute as @s[scores={__rockets_used_while_flying=1..}] run function __:reset_flight/time_passed/rockets
     {
         # sound
         execute as @s[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] at @s run playsound item.armor.equip_elytra player @s
         # reset rockets
-        scoreboard players set @s __rockets_used_while_flying 0
+        #!sb @s __rockets_used_while_flying = 0
+
+        # actionbar rocket count
+        #!sb @s __rockets_remaining = global __max_rockets
+        #!sb @s __rockets_remaining -= @s __rockets_used_while_flying
+        execute as @s run function __:display_rocket_count
     }
 
     # if the elytra is repairable

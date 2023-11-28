@@ -9,8 +9,23 @@ execute as @a run function __:timer/1t/all_players
     # flying
     execute as @s[nbt={FallFlying:1b}] run function __:timer/1t/all_players/flying
     {
+        # actionbar rocket count
+        execute as @s[scores={__time_flying=..1}] run scoreboard players add @s __time_flying 1
+        #!sb @s __rockets_remaining = global __max_rockets
+        #!sb @s __rockets_remaining -= @s __rockets_used_while_flying
+        execute as @s[scores={__time_flying=1}] run function __:display_rocket_count
+        execute as @s[scores={__rockets_remaining=0}] run function __:display_rocket_count
+
         # count rocket boost rockets
-        execute as @s[scores={__rockets_used=1..}] run scoreboard players add @s __rockets_used_while_flying 1
+        execute as @s[scores={__rockets_used=1..}] run function __:timer/1t/all_players/flying/rocket_used
+        {
+            scoreboard players add @s __rockets_used_while_flying 1
+
+            # actionbar rocket count
+            #!sb @s __rockets_remaining = global __max_rockets
+            #!sb @s __rockets_remaining -= @s __rockets_used_while_flying
+            execute as @s run function __:display_rocket_count
+        }
 
         # if rocket boost rockets > max rockets
         execute if score @s __rockets_used_while_flying > global __max_rockets run function __:timer/1t/all_players/flying/cancel_flight
