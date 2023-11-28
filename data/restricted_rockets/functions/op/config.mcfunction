@@ -23,9 +23,9 @@ tellraw @s ["",{"text":"Max rockets: "},{"text":"[","color":"aqua","clickEvent":
 
 # max rockets player override
 execute if score global __override_max_rockets matches 0 run \
-    tellraw @s ["",{"text":"Allow player override: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __override_max_rockets 1"}}]
+    tellraw @s ["",{"text":"Allow client override: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __override_max_rockets 1"}}]
 execute if score global __override_max_rockets matches 1 run \
-    tellraw @s ["",{"text":"Allow player override: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __override_max_rockets 0"}}]
+    tellraw @s ["",{"text":"Allow client override: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __override_max_rockets 0"}}]
 
 tellraw @s ""
 
@@ -37,15 +37,23 @@ execute if score global __safe_elytra_break matches 1 run \
 
 # safe elytra break player override
 execute if score global __override_safe_elytra_break matches 0 run \
-    tellraw @s ["",{"text":"Allow player override: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __override_safe_elytra_break 1"}}]
+    tellraw @s ["",{"text":"Allow client override: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __override_safe_elytra_break 1"}}]
 execute if score global __override_safe_elytra_break matches 1 run \
-    tellraw @s ["",{"text":"Allow player override: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __override_safe_elytra_break 0"}}]
+    tellraw @s ["",{"text":"Allow client override: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __override_safe_elytra_break 0"}}]
 
 tellraw @s ""
 
-# display mode
-tellraw @s ["",{"text":"Default remaining rockets display mode: "},{"text":"[","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __display <value>"}},{"score":{"name":"global","objective":"__display"},"color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __display <value>"}},{"text":"]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __display <value>"}}]
-tellraw @s {"text":" \u0020 \u00200: off, 1: chat, 2: actionbar"}
+# rockets tip
+execute if score global __rockets_tip matches 0 run \
+    tellraw @s ["",{"text":"Rockets tip: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __rockets_tip 1"}}]
+execute if score global __rockets_tip matches 1 run \
+    tellraw @s ["",{"text":"Rockets tip: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __rockets_tip 0"}}]
+
+# zero rockets tip always
+execute if score global __zero_rockets_tip_always matches 0 run \
+    tellraw @s ["",{"text":"Zero rockets tip always on: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __zero_rockets_tip_always 1"}}]
+execute if score global __zero_rockets_tip_always matches 1 run \
+    tellraw @s ["",{"text":"Zero rockets tip always on: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __zero_rockets_tip_always 0"}}]
 
 # horizontal line
 tellraw @s ["",{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"}]

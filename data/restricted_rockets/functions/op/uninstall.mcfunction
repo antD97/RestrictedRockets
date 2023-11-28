@@ -1,8 +1,6 @@
 # Copyright © 2022 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
-scoreboard objectives remove __init
-
 scoreboard objectives remove __config
 
 scoreboard objectives remove __max_rockets
@@ -11,8 +9,12 @@ scoreboard objectives remove __override_max_rockets
 scoreboard objectives remove __safe_elytra_break
 scoreboard objectives remove __override_safe_elytra_break
 
-scoreboard objectives remove __display
-scoreboard objectives remove __override_display
+scoreboard objectives remove __rockets_tip
+scoreboard objectives remove __override_rockets_tip
+scoreboard objectives remove __zero_rockets_tip_always
+scoreboard objectives remove __override_zero_rockets_tip_always
+
+scoreboard objectives remove __init
 
 scoreboard objectives remove __rockets_used
 scoreboard objectives remove __rockets_used_while_flying

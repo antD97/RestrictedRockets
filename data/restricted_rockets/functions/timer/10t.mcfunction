@@ -11,8 +11,10 @@ execute as @a run function __:timer/10t/all_players
     #!sb enable @s __override_max_rockets
     #!sb enable @s __safe_elytra_break
     #!sb enable @s __override_safe_elytra_break
-    #!sb enable @s __display
-    #!sb enable @s __override_display
+    #!sb enable @s __rockets_tip
+    #!sb enable @s __override_rockets_tip
+    #!sb enable @s __zero_rockets_tip_always
+    #!sb enable @s __override_zero_rockets_tip_always
 
     # config trigger
     execute if score @s __config matches 1 run function __:player_config
