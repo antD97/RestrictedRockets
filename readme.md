@@ -11,13 +11,13 @@ before having to land again. Once a player uses more than the maximum amount of 
 break. Once the player either lands or is still in water, the elytra will return to its previous state. Players can also
 land or be still in water before they reach the maximum rockets to reset their flight preemptively.
 
-This pack has configurable options that can be set globally for all players or optionally overridden by players. Server
-operators can set certain settings as overridable or not overridable by non-operator players to either enforce a
-specific ruleset or allow players to match their preferences. See the configuration section below for details.
-
 How this affects gameplay:
 - Incentives more creative methods of transportation that require infrastructure
 - Longer duration rockets become more value (if max rockets is set to one or more)
+
+This pack has configurable options that can be set globally for all players or optionally overridden by players. Server
+operators can set certain settings as overridable or not overridable to either enforce a specific ruleset or allow
+players to match their preferences. See the configuration section below for details.
 
 Notes:
 - Temporarily broken elytra that end up in the player's inventory can be restored by being equipped
