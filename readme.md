@@ -12,12 +12,12 @@ break. Once the player either lands or is still in water, the elytra will return
 land or be still in water before they reach the maximum rockets to reset their flight preemptively.
 
 How this affects gameplay:
-- Incentives more creative methods of transportation that require infrastructure
-- Longer duration rockets become more value (if max rockets is set to one or more)
+- Incentivizes more creative methods of transportation that require infrastructure
+- Longer duration rockets become more valuable (if max rockets is set to one or more)
 
 This pack has configurable options that can be set globally for all players or optionally overridden by players. Server
-operators can set certain settings as overridable or not overridable to either enforce a specific ruleset or allow
-players to match their preferences. See the configuration section below for details.
+operators have the ability to chose which of these settings can be overridden to either enforce a specific ruleset or to
+allow players to match their preferences. See the configuration section below for details.
 
 Notes:
 - Temporarily broken elytra that end up in the player's inventory can be restored by being equipped
@@ -39,7 +39,7 @@ Server-wide rules can be modified by operators using: `/function restricted_rock
 Player-specific rules can be modified by anyone using: `/trigger restricted_rockets_config`
 
 Clicking on values in aqua will suggest a command to modify that value. The change will be made after sending the
-command, and, to see the change, the config menu has to be reopened using the config menu command.
+command. For the menu to reflect the change, it must be reopened using the config menu command.
 
 Operators can also remove all scoreboard objectives and scheduled functions with
 `/function restricted_rockets:op/uninstall`. The next time the datapack is reloaded, the datapack will run like it did
