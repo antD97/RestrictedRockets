@@ -6,10 +6,10 @@
 [Video Demo](https://www.youtube.com/watch?v=W3TiHul3lkM) |
 [Downloads](https://github.com/antD97/RestrictedRockets/releases)
 
-Restricted Rockets is a simple datapack that allows you to restrict how many rockets players can use while flying with
-an elytra before having to land again. Once a player uses more than the maximum amount of rockets, their elytra will
-temporarily break. Once the player either lands or is still in water, the elytra will return to its previous state.
-Players can also land or be still in water before they reach the maximum rockets to reset their flight preemptively.
+Restricted Rockets is a simple datapack that restricts how many rockets players can use while flying with an elytra
+before having to land again. Once a player uses more than the maximum amount of rockets, their elytra will temporarily
+break. Once the player either lands or is still in water, the elytra will return to its previous state. Players can also
+land or be still in water before they reach the maximum rockets to reset their flight preemptively.
 
 This pack has configurable options that can be set globally for all players or optionally overridden by players. Server
 operators can set certain settings as overridable or not overridable by non-operator players to either enforce a
