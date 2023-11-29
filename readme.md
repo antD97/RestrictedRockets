@@ -38,54 +38,63 @@ this project from source:
 Server-wide rules can be modified by operators using: `/function restricted_rockets:op/config`  
 Player-specific rules can be modified by anyone using: `/trigger restricted_rockets_config`
 
-Aqua values that appear in the menu can be modified by being clicked.
-Clicking on the aqua values suggests a command to modify that value. The change will be made after sending the command,
-and, to see the change, the config menu has to be reopened using the config menu command.
+Clicking on values in aqua will suggest a command to modify that value. The change will be made after sending the
+command, and, to see the change, the config menu has to be reopened using the config menu command.
 
-Operators can also remove all scoreboard objectives, and scheduled functions with
+Operators can also remove all scoreboard objectives and scheduled functions with
 `/function restricted_rockets:op/uninstall`. The next time the datapack is reloaded, the datapack will run like it did
 the first time.
 
-## Server-Wide Config
+## Server-Wide Configuration
 
-**Max rockets (default: 3):** The number of rockets players are permitted to use before having to land/be still in
-water.  
-**Allow client override (default: false):** Whether players are allowed to configure their own "max rockets" value.
-Players are forced to use the server wide max rockets value otherwise.
+- `Max rockets` (default: 3)
+  - The number of rockets players are permitted to use before having to land/be still in water.
+- `Allow client override` (default: false)
+  - Whether players are allowed to configure their own "max rockets" value. Players are forced to use the server wide
+    "max rockets" value otherwise.
 
-**Safe elytra break (default: true):** Whether slow falling is activated on players whose elytra was temporarily broken
-after using more than the max number of rockets.  
-**Allow client override (default: true):** Whether players are allowed to configure their own "safe elytra break" value.
-Players are forced to use the server wide "safe elytra break" value otherwise.
+- `Safe elytra break` (default: true)
+  - Whether slow falling is activated on players whose elytra was temporarily broken after using more than the max
+    number of rockets.  
+- `Allow client override` (default: true)
+  - Whether players are allowed to configure their own "safe elytra break" value. Players are forced to use the server
+    wide "safe elytra break" value otherwise.
 
-**Rockets tip (default: true):** Whether the "remaining rockets" actionbar text is displayed on initial flight, rocket
-use, and rocket reset.  
-**Zero rockets tip persists (default: true):** Whether the "remaining rockets" actionbar text is *always* displayed when
-there are no more rockets left to use.
+- `Rockets tip` (default: true)
+  - Whether the "remaining rockets" actionbar text is displayed on initial flight, rocket use, and rocket reset.  
+- `Zero rockets tip persists` (default: true)
+  - Whether the "remaining rockets" actionbar text is *always* displayed when there are no more rockets left to use.
 
 *Note that the rocket tip options can always be overridden through player-specific configuration.*
 
-## Player-Specific Config
+## Player-Specific Configuration
 
-**Override server max rockets (default: false):** *This option will only appear if "allow client override" is enabled*
-*on the server.* Whether or not to override the server "max rockets" value.  
-**Override value (default: 0):** *This option will only appear if "override server max rockets" is true.* The number of
-rockets this player is permitted to use before having to land/be still in water.
+- `Override server max rockets` (default: false)
+  - Whether or not to override the server "max rockets" value.
+  - *This option will only appear if "allow client override" is enabled on the server.*
+  - `Override value` (default: 0)
+    - The number of rockets this player is permitted to use before having to land/be still in water.
+    - *This option will only appear if "override server max rockets" is true.*
 
-**Override server safe elytra break (default: false):** *This option will only appear if "allow client override" is*
-*enabled on the server.* Whether or not to override the server "safe elytra break" value.  
-**Override value (default: false):** *This option will only appear if "override server safe elytra break" is true.*
-Whether slow falling is activated on this player if the elytra is temporarily broken after using more than the max
-number of rockets.
+- `Override server safe elytra break` (default: false)
+  - Whether or not to override the server "safe elytra break" value.
+  - *This option will only appear if "allow client override" is enabled on the server.*
+  - `Override value` (default: false)
+    - Whether slow falling is activated on this player if the elytra is temporarily broken after using more than the max
+      number of rockets.
+    - *This option will only appear if "override server safe elytra break" is true.*
 
-**Override server rockets tip (default:false):** Whether or not to override the server "rockets tip" value.  
-**Override value (default: false):** *This option will only appear if "override rockets tip" is true.* Whether the
-"remaining rockets" actionbar text is displayed on initial flight, rocket use, and rocket reset.
+- `Override server rockets tip` (default:false)
+  - Whether or not to override the server "rockets tip" value.  
+  - `Override value` (default: false)
+    - Whether the "remaining rockets" actionbar text is displayed on initial flight, rocket use, and rocket reset.
+    - *This option will only appear if "override rockets tip" is true.*
 
-**Override server zero rockets tip persists (default: false):** Whether or not to override the server "zero rockets tip
-persists" value.  
-**Override value (default: false):** *This option will only appear if "override server zero rockets tip persists" is*
-*true.* Whether the "remaining rockets" actionbar text is *always* displayed when there are no more rockets left to use.
+- `Override server zero rockets tip persists` (default: false)
+  - Whether or not to override the server "zero rockets tip persists" value.  
+  - `Override value` (default: false)
+    - Whether the "remaining rockets" actionbar text is *always* displayed when there are no more rockets left to use.
+    - *This option will only appear if "override server zero rockets tip persists" is true.*
 
 ---
 Copyright © 2022-2023 antD97  
