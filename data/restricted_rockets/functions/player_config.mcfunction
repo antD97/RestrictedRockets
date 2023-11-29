@@ -1,4 +1,4 @@
-# Copyright © 2022 antD97
+# Copyright © 2022-2023 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
 # https://minecraft.tools/en/json_text.php
@@ -67,12 +67,14 @@ execute if score @s __override_rockets_tip matches 1 run function __:player_conf
 tellraw @s ""
 
 # zero rockets tip always
-execute if score global __zero_rockets_tip_always matches 0 run tellraw @s ["",{"text":"Server zero rockets tip always on: "},{"text":"false","bold":true}]
-execute if score global __zero_rockets_tip_always matches 1 run tellraw @s ["",{"text":"Server zero rockets tip always on: "},{"text":"true","bold":true}]
-execute if score @s __override_zero_rockets_tip_always matches 0 run tellraw @s ["",{"text":"Override server zero rockets tip always on: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger __override_zero_rockets_tip_always set 1"}}]
+execute if score global __zero_rockets_tip_always matches 0 run tellraw @s ["",{"text":"Server zero rockets tip persists: "},{"text":"false","bold":true}]
+execute if score global __zero_rockets_tip_always matches 1 run tellraw @s ["",{"text":"Server zero rockets tip persists: "},{"text":"true","bold":true}]
+#!sb @s __override_zero_rockets_tip_always += 0
+execute if score @s __override_zero_rockets_tip_always matches 0 run tellraw @s ["",{"text":"Override server zero rockets tip persists: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger __override_zero_rockets_tip_always set 1"}}]
 execute if score @s __override_zero_rockets_tip_always matches 1 run function __:player_config/zero_rockets_tip_always_overridden
 {
-    tellraw @s ["",{"text":"Override server zero rockets tip always on: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger __override_zero_rockets_tip_always set 0"}}]
+    tellraw @s ["",{"text":"Override server zero rockets tip persists: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger __override_zero_rockets_tip_always set 0"}}]
+    #!sb @s __zero_rockets_tip_always += 0
     execute if score @s __zero_rockets_tip_always matches 0 run tellraw @s ["",{"text":" \u0020 \u0020Override value: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger __zero_rockets_tip_always set 1"}}]
     execute if score @s __zero_rockets_tip_always matches 1 run tellraw @s ["",{"text":" \u0020 \u0020Override value: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger __zero_rockets_tip_always set 0"}}]
 }

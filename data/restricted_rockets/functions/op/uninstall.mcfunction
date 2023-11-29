@@ -1,4 +1,4 @@
-# Copyright © 2022 antD97
+# Copyright © 2022-2023 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
 scoreboard objectives remove __config
@@ -25,6 +25,8 @@ scoreboard objectives remove __time_since_cancelled
 scoreboard objectives remove __time_flying
 
 scoreboard objectives remove __in_liquid
+
+scoreboard objectives remove __slow_falling
 
 scoreboard objectives remove __x_pos
 scoreboard objectives remove __y_pos

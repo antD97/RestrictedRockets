@@ -1,5 +1,5 @@
 
-# Copyright © 2022 antD97
+# Copyright © 2022-2023 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
 # https://minecraft.tools/en/json_text.php
@@ -51,9 +51,9 @@ execute if score global __rockets_tip matches 1 run \
 
 # zero rockets tip always
 execute if score global __zero_rockets_tip_always matches 0 run \
-    tellraw @s ["",{"text":"Zero rockets tip always on: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __zero_rockets_tip_always 1"}}]
+    tellraw @s ["",{"text":"Zero rockets tip persists: "},{"text":"[false]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __zero_rockets_tip_always 1"}}]
 execute if score global __zero_rockets_tip_always matches 1 run \
-    tellraw @s ["",{"text":"Zero rockets tip always on: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __zero_rockets_tip_always 0"}}]
+    tellraw @s ["",{"text":"Zero rockets tip persists: "},{"text":"[true]","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set global __zero_rockets_tip_always 0"}}]
 
 # horizontal line
 tellraw @s ["",{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"},{"text":"\u2500"},{"text":"\u2500","color":"#FF0000"}]

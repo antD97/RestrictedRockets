@@ -1,4 +1,4 @@
-# Copyright © 2022 antD97
+# Copyright © 2022-2023 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
 # 1t (0.1s) timer
@@ -9,26 +9,34 @@ execute as @a run function __:timer/1t/all_players
     # flying
     execute as @s[nbt={FallFlying:1b}] run function __:timer/1t/all_players/flying
     {
-        # actionbar rocket count
         execute as @s[scores={__time_flying=..1}] run scoreboard players add @s __time_flying 1
-        #!sb @s __rockets_remaining = global __max_rockets
-        #!sb @s __rockets_remaining -= @s __rockets_used_while_flying
-        execute as @s[scores={__time_flying=1}] run function __:display_rocket_count
-        execute as @s[scores={__rockets_remaining=0}] run function __:display_rocket_count
 
-        # count rocket boost rockets
-        execute as @s[scores={__rockets_used=1..}] run function __:timer/1t/all_players/flying/rocket_used
+        # display rocket count on start flying
+        execute as @s[scores={__time_flying=1}] run function __:timer/1t/all_players/flying/start
         {
-            scoreboard players add @s __rockets_used_while_flying 1
-
-            # actionbar rocket count
-            #!sb @s __rockets_remaining = global __max_rockets
-            #!sb @s __rockets_remaining -= @s __rockets_used_while_flying
-            execute as @s run function __:display_rocket_count
+            # sets @s __temp3 as client's __rocket_tip
+            function __:check_rocket_tip
+            # rocket tip
+            execute if score @s __temp3 matches 1 run function __:display_rocket_count
         }
 
+        # on rocket use
+        execute as @s[scores={__rockets_used=1..}] run function __:timer/1t/all_players/flying/rocket_used
+        {
+            # count rocket boost rockets
+            scoreboard players add @s __rockets_used_while_flying 1
+            
+            # sets @s __temp3 as client's __rocket_tip
+            function __:check_rocket_tip
+            # rocket tip
+            execute if score @s __temp3 matches 1 run function __:display_rocket_count
+        }
+
+        # @s __temp2 used as client's __max_rockets
+        function __:calc_max_rockets
+
         # if rocket boost rockets > max rockets
-        execute if score @s __rockets_used_while_flying > global __max_rockets run function __:timer/1t/all_players/flying/cancel_flight
+        execute if score @s __rockets_used_while_flying > @s __temp2 run function __:timer/1t/all_players/flying/cancel_flight
         {
             #!sb @s __time_since_cancelled = 0
 
@@ -41,6 +49,9 @@ execute as @a run function __:timer/1t/all_players
                 item modify entity @s armor.chest __:save_prev_damage
                 item modify entity @s armor.chest __:set_break_lore
                 item modify entity @s armor.chest __:set_repairable
+
+                # safe elytra break
+                #!sb @s __slow_falling = 1
             }
 
             item modify entity @s armor.chest __:break_elytra

@@ -1,4 +1,4 @@
-# Copyright © 2022 antD97
+# Copyright © 2022-2023 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
 # attempt to reset flight for executing players
@@ -8,6 +8,8 @@ execute as @s[scores={__time_since_cancelled=4..}] run function __:reset_flight/
 {
     #!sb @s __time_flying = 0
 
+    #!sb @s __slow_falling = 0
+
     # reset rockets
     execute as @s[scores={__rockets_used_while_flying=1..}] run function __:reset_flight/time_passed/rockets
     {
@@ -16,10 +18,10 @@ execute as @s[scores={__time_since_cancelled=4..}] run function __:reset_flight/
         # reset rockets
         #!sb @s __rockets_used_while_flying = 0
 
-        # actionbar rocket count
-        #!sb @s __rockets_remaining = global __max_rockets
-        #!sb @s __rockets_remaining -= @s __rockets_used_while_flying
-        execute as @s run function __:display_rocket_count
+        # sets @s __temp3 as client's __rocket_tip
+        function __:check_rocket_tip
+        # rocket tip
+        execute if score @s __temp3 matches 1 run function __:display_rocket_count
     }
 
     # if the elytra is repairable

@@ -1,4 +1,4 @@
-# Copyright © 2022 antD97
+# Copyright © 2022-2023 antD97
 # Licensed under the MIT License https://antD.mit-license.org/
 
 scoreboard objectives add __config trigger
@@ -62,6 +62,8 @@ scoreboard objectives add __time_since_cancelled dummy
 scoreboard objectives add __time_flying dummy
 
 scoreboard objectives add __in_liquid dummy
+
+scoreboard objectives add __slow_falling dummy
 
 scoreboard objectives add __x_pos dummy
 scoreboard objectives add __y_pos dummy
