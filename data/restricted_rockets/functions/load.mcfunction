@@ -41,7 +41,7 @@ scoreboard objectives add __init dummy
 execute if score global __init matches 0 run function __:load/defaults
 {
     # extra check to update more safely from older versions without __init
-    execute if score global __max_rockets matches 0 run scoreboard players set global __max_rockets 3
+    execute if score global __max_rockets matches 0 run scoreboard players set global __max_rockets 2
     #!sb global __override_max_rockets = 0
     #!sb global __safe_elytra_break = 1
     #!sb global __override_safe_elytra_break = 1
