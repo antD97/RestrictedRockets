@@ -25,9 +25,9 @@ execute as @s[scores={__time_since_cancelled=4..}] run function __:reset_flight/
     }
 
     # if the elytra is repairable
-    #!sb global __temp1 = 0
-    execute store result score global __temp1 run data get entity @s Inventory[{Slot:102b}].tag.__repairable
-    execute if score global __temp1 matches 1 run function __:reset_flight/time_passed/repairable
+    #!sb __ __temp1 = 0
+    execute store result score __ __temp1 run data get entity @s Inventory[{Slot:102b}].tag.__repairable
+    execute if score __ __temp1 matches 1 run function __:reset_flight/time_passed/repairable
     {
         # fix elytra
         execute store result storage __:elytra Damage int 1 run data get entity @s Inventory[{Slot:102b}].tag.__prev_damage

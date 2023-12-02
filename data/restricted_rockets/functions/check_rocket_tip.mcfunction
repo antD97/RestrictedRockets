@@ -11,7 +11,7 @@
 
 # not overridden & server is set to true
 execute as @s[scores={__override_rockets_tip=0}] run \
-    execute if score global __rockets_tip matches 1 run \
+    execute if score __ __rockets_tip matches 1 run \
     scoreboard players set @s __temp3 1
 
 # overridden & client is set to true

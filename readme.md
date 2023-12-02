@@ -1,12 +1,12 @@
 # Restricted Rockets
 
 [Modrinth](https://modrinth.com/datapack/restricted-rockets) |
-[Planet Minecraft](https://www.planetminecraft.com/data-pack/restricted-rockets-5611086/) |
+[Planet Minecraft](https://www.planetminecraft.com/data-pack/restricted-rockets-5611086) |
 [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/restricted-rockets) |
-[Video Demo](https://www.youtube.com/watch?v=W3TiHul3lkM) |
+[Video Demo](https://www.youtube.com/watch?v=gTFcemW9zrc) |
 [Downloads](https://github.com/antD97/RestrictedRockets/releases)
 
-Restricted Rockets is a [Minecraft](https://www.minecraft.net/) datapack that restricts how many rockets players can use
+Restricted Rockets is a [Minecraft](https://www.minecraft.net) datapack that restricts how many rockets players can use
 while flying with an elytra before having to land again. Once a player uses more than the maximum amount of rockets,
 their elytra will temporarily break. Once the player either lands or is still in water, the elytra will return to its
 previous state. Players can also land or be still in water before they reach the maximum rockets to reset their flight
@@ -51,15 +51,15 @@ the first time.
 - `Max rockets` (default: 2)
   - The number of rockets players are permitted to use before having to land/be still in water.
 - `Allow client override` (default: false)
-  - Whether players are allowed to configure their own "max rockets" value. Players are forced to use the server wide
+  - Whether players are allowed to configure their own "max rockets" setting. Players are forced to use the server wide
     "max rockets" value otherwise.
 
-- `Safe elytra break` (default: true)
+- `Slow fall on elytra break` (default: true)
   - Whether slow falling is activated on players whose elytra was temporarily broken after using more than the max
     number of rockets.  
 - `Allow client override` (default: true)
-  - Whether players are allowed to configure their own "safe elytra break" value. Players are forced to use the server
-    wide "safe elytra break" value otherwise.
+  - Whether players are allowed to configure their own "slow fall on elytra break" setting. Players are forced to use
+    the server wide "slow fall on elytra break" value otherwise.
 
 - `Rockets tip` (default: true)
   - Whether the "remaining rockets" actionbar text is displayed on initial flight, rocket use, and rocket reset.  
@@ -70,32 +70,33 @@ the first time.
 
 ## Player-Specific Configuration
 
-- `Override server max rockets` (default: false)
-  - Whether or not to override the server "max rockets" value.
-  - *This option will only appear if "allow client override" is enabled on the server.*
-  - `Override value` (default: 0)
+- Max rockets
+  - `Client value` (default: server)
+    - Whether to use the server "max rockets" value or the custom one.
+    - *This option will only appear if "allow client override" is enabled on the server.*
+  - `Custom value` (default: 0)
     - The number of rockets this player is permitted to use before having to land/be still in water.
-    - *This option will only appear if "override server max rockets" is true.*
-
-- `Override server safe elytra break` (default: false)
-  - Whether or not to override the server "safe elytra break" value.
-  - *This option will only appear if "allow client override" is enabled on the server.*
-  - `Override value` (default: false)
-    - Whether slow falling is activated on this player if the elytra is temporarily broken after using more than the max
-      number of rockets.
-    - *This option will only appear if "override server safe elytra break" is true.*
-
-- `Override server rockets tip` (default:false)
-  - Whether or not to override the server "rockets tip" value.  
-  - `Override value` (default: false)
+    - *Only used if "client value" is set to custom.*
+- Slow fall on elytra break
+  - `Client value` (default: server)
+    - Whether to use the server "slow fall on elytra break" value or the custom one.
+    - *This option will only appear if "allow client override" is enabled on the server.*
+  - `Custom value` (default: false)
+    - Whether slow falling is activated on this player when the elytra is temporarily broken after using more than the
+      max number of rockets.
+    - *Only used if "client value" is set to custom.*
+- Rockets tip
+  - `Client value` (default: server)
+    - Whether to use the server "rockets tip" value or the custom one.
+  - `Custom value` (default: false)
     - Whether the "remaining rockets" actionbar text is displayed on initial flight, rocket use, and rocket reset.
-    - *This option will only appear if "override rockets tip" is true.*
-
-- `Override server zero rockets tip persists` (default: false)
-  - Whether or not to override the server "zero rockets tip persists" value.  
-  - `Override value` (default: false)
+    - *Only used if "client value" is set to custom.*
+- Zero rockets tip persists
+  - `Client value` (default: server)
+    - Whether to use the server "zero rockets tip" value or the custom one.
+  - `Custom value` (default: false)
     - Whether the "remaining rockets" actionbar text is *always* displayed when there are no more rockets left to use.
-    - *This option will only appear if "override server zero rockets tip persists" is true.*
+    - *Only used if "client value" is set to custom.*
 
 ---
 Copyright © 2022-2023 antD97  

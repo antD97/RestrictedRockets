@@ -31,36 +31,36 @@ execute as @a run function __:timer/10t/all_players
     execute as @s[scores={__in_liquid=1}] run function __:timer/10t/all_players/in_liquid
     {
         # speed limit
-        #!sb global __temp1 = 100
+        #!sb __ __temp1 = 100
         # constant -1
-        #!sb global __temp2 = -1
+        #!sb __ __temp2 = -1
 
         # find x speed
-        execute store result score global __temp3 run data get entity @s Pos[0] 1000
-        #!sb global __temp3 -= @s __x_pos
+        execute store result score __ __temp3 run data get entity @s Pos[0] 1000
+        #!sb __ __temp3 -= @s __x_pos
         # absolute value
-        execute if score global __temp3 matches ..0 run scoreboard players operation global __temp3 *= global __temp2
+        execute if score __ __temp3 matches ..0 run scoreboard players operation __ __temp3 *= __ __temp2
 
         # x speed limit check
-        execute if score global __temp3 < global __temp1 run function __:timer/10t/all_players/in_liquid/no_player_lock/x_passed
+        execute if score __ __temp3 < __ __temp1 run function __:timer/10t/all_players/in_liquid/no_player_lock/x_passed
         {
             # find y speed
-            execute store result score global __temp3 run data get entity @s Pos[1] 1000
-            #!sb global __temp3 -= @s __y_pos
+            execute store result score __ __temp3 run data get entity @s Pos[1] 1000
+            #!sb __ __temp3 -= @s __y_pos
             # absolute value
-            execute if score global __temp3 matches ..0 run scoreboard players operation global __temp3 *= global __temp2
+            execute if score __ __temp3 matches ..0 run scoreboard players operation __ __temp3 *= __ __temp2
 
             # y speed limit check
-            execute if score global __temp3 < global __temp1 run function __:timer/10t/all_players/in_liquid/no_player_lock/x_passed/y_passed
+            execute if score __ __temp3 < __ __temp1 run function __:timer/10t/all_players/in_liquid/no_player_lock/x_passed/y_passed
             {
                 # find z speed
-                execute store result score global __temp3 run data get entity @s Pos[2] 1000
-                #!sb global __temp3 -= @s __z_pos
+                execute store result score __ __temp3 run data get entity @s Pos[2] 1000
+                #!sb __ __temp3 -= @s __z_pos
                 # absolute value
-                execute if score global __temp3 matches ..0 run scoreboard players operation global __temp3 *= global __temp2
+                execute if score __ __temp3 matches ..0 run scoreboard players operation __ __temp3 *= __ __temp2
 
                 # z speed limit check
-                execute if score global __temp3 < global __temp1 run function __:reset_flight
+                execute if score __ __temp3 < __ __temp1 run function __:reset_flight
             }
         }
     }
@@ -69,16 +69,16 @@ execute as @a run function __:timer/10t/all_players
     execute as @s[scores={__slow_falling=1}] run function __:timer/10t/all_players/safe_elytra_break
     {
         # client cannot override & global rule is set to true
-        execute if score global __override_safe_elytra_break matches 0 run \
-            execute if score global __safe_elytra_break matches 1 run \
+        execute if score __ __override_safe_elytra_break matches 0 run \
+            execute if score __ __safe_elytra_break matches 1 run \
             effect give @s slow_falling 2
 
         # client overridable
-        execute if score global __override_safe_elytra_break matches 1 run function __:timer/10t/all_players/safe_elytra_break/overridable
+        execute if score __ __override_safe_elytra_break matches 1 run function __:timer/10t/all_players/safe_elytra_break/overridable
         {
             # not overridden & server is set to true
             execute if score @s __override_safe_elytra_break matches 0 run \
-                execute if score global __safe_elytra_break matches 1 run \
+                execute if score __ __safe_elytra_break matches 1 run \
                 effect give @s slow_falling 2
 
             # overridden & client is set to true
@@ -103,7 +103,7 @@ execute as @a run function __:timer/10t/all_players
         #!sb @s __temp3 = 0
         # not overridden & server is set to true
         execute as @s[scores={__override_zero_rockets_tip_always=0}] run \
-            execute if score global __zero_rockets_tip_always matches 1 run \
+            execute if score __ __zero_rockets_tip_always matches 1 run \
             scoreboard players set @s __temp3 1
         # overridden & client is set to true
         execute as @s[scores={__override_zero_rockets_tip_always=1,__zero_rockets_tip_always=1}] run \
