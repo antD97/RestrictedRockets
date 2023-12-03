@@ -3,7 +3,7 @@
 [Modrinth](https://modrinth.com/datapack/restricted-rockets) |
 [Planet Minecraft](https://www.planetminecraft.com/data-pack/restricted-rockets-5611086) |
 [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/restricted-rockets) |
-[Video Demo](https://www.youtube.com/watch?v=gTFcemW9zrc) |
+[Video Demo](https://www.youtube.com/watch?v=NgfgBuMwCS0) |
 [Downloads](https://github.com/antD97/RestrictedRockets/releases)
 
 Restricted Rockets is a [Minecraft](https://www.minecraft.net) datapack that restricts how many rockets players can use
@@ -79,24 +79,16 @@ the first time.
     - *Only used if "client value" is set to custom.*
 - Slow fall on elytra break
   - `Client value` (default: server)
-    - Whether to use the server "slow fall on elytra break" value or the custom one.
-    - *This option will only appear if "allow client override" is enabled on the server.*
-  - `Custom value` (default: false)
     - Whether slow falling is activated on this player when the elytra is temporarily broken after using more than the
       max number of rockets.
-    - *Only used if "client value" is set to custom.*
+    - Selecting server uses the server-wide value.
+    - *This option will only appear if "allow client override" is enabled on the server.*
 - Rockets tip
   - `Client value` (default: server)
-    - Whether to use the server "rockets tip" value or the custom one.
-  - `Custom value` (default: false)
     - Whether the "remaining rockets" actionbar text is displayed on initial flight, rocket use, and rocket reset.
-    - *Only used if "client value" is set to custom.*
 - Zero rockets tip persists
   - `Client value` (default: server)
-    - Whether to use the server "zero rockets tip" value or the custom one.
-  - `Custom value` (default: false)
     - Whether the "remaining rockets" actionbar text is *always* displayed when there are no more rockets left to use.
-    - *Only used if "client value" is set to custom.*
 
 ---
 Copyright © 2022-2023 antD97  

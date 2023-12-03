@@ -13,27 +13,25 @@ scoreboard objectives add __override_max_rockets trigger
 #!sb __ __override_max_rockets += 0
 
 # configurable slow falling on elytra break
+# per player: 0=GLOBAL value, 1=false, 2=true
 scoreboard objectives add __safe_elytra_break trigger
 #!sb __ __safe_elytra_break += 0
 
 # global value: 0=players CANNOT override, 1=players CAN override
-# per player value: 0=use GLOBAL value, 1=use PLAYER value
 scoreboard objectives add __override_safe_elytra_break trigger
 #!sb __ __override_safe_elytra_break += 0
 
 # configurable rockets remaining actionbar
+# global: 0=false, 1=true
+# per player: 0=GLOBAL value, 1=false, 2=true
 scoreboard objectives add __rockets_tip trigger
 #!sb __ __rockets_tip += 0
 
-# per player value: 0=use GLOBAL value, 1=use PLAYER value
-scoreboard objectives add __override_rockets_tip trigger
-
 # configurable zero rockets remaining actionbar always
+# global: 0=false, 1=true
+# per player: 0=use GLOBAL value, 1=false, 2=true
 scoreboard objectives add __zero_rockets_tip_always trigger
 #!sb __ __zero_rockets_tip_always += 0
-
-# per player value: 0=use GLOBAL value, 1=use PLAYER value
-scoreboard objectives add __override_zero_rockets_tip_always trigger
 
 # init defaults
 scoreboard objectives add __init dummy

@@ -10,9 +10,7 @@ scoreboard objectives remove __safe_elytra_break
 scoreboard objectives remove __override_safe_elytra_break
 
 scoreboard objectives remove __rockets_tip
-scoreboard objectives remove __override_rockets_tip
 scoreboard objectives remove __zero_rockets_tip_always
-scoreboard objectives remove __override_zero_rockets_tip_always
 
 scoreboard objectives remove __init
 
