@@ -1,5 +1,5 @@
 {
     "function": "set_lore",
     "lore": [],
-    "replace": true
+    "mode": "replace_all"
 }

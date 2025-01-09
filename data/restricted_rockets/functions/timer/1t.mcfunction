@@ -41,11 +41,11 @@ execute as @a run function __:timer/1t/all_players
             #!sb @s __time_since_cancelled = 0
 
             # if the elytra is not already repairable
-            execute store result score __ __temp1 run data get entity @s Inventory[{Slot:102b}].tag.__repairable
+            execute store result score __ __temp1 run data get entity @s Inventory[{Slot:102b}].components.minecraft:custom_data.__repairable
             execute if score __ __temp1 matches 0 run function __:timer/1t/all_players/flying/cancel_flight/not_repairable
             {
                 # temp break elytra
-                execute store result storage __:elytra Damage int 1 run data get entity @s Inventory[{Slot:102b}].tag.Damage
+                execute store result storage __:elytra Damage int 1 run data get entity @s Inventory[{Slot:102b}].components.minecraft:damage
                 item modify entity @s armor.chest __:save_prev_damage
                 item modify entity @s armor.chest __:set_break_lore
                 item modify entity @s armor.chest __:set_repairable
