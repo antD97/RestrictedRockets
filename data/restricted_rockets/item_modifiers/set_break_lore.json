@@ -1,5 +1,5 @@
 {
     "function": "set_lore",
     "lore": ["Temporarily Broken"],
-    "replace": true
+    "mode": "replace_all"
 }

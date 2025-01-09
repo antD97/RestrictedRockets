@@ -26,11 +26,20 @@ execute as @s[scores={__time_since_cancelled=4..}] run function __:reset_flight/
 
     # if the elytra is repairable
     #!sb __ __temp1 = 0
-    execute store result score __ __temp1 run data get entity @s Inventory[{Slot:102b}].tag.__repairable
+    execute store result score __ __temp1 run data get entity @s Inventory[{Slot:102b}].components.minecraft:custom_data.__repairable
     execute if score __ __temp1 matches 1 run function __:reset_flight/time_passed/repairable
     {
-        # fix elytra
-        execute store result storage __:elytra Damage int 1 run data get entity @s Inventory[{Slot:102b}].tag.__prev_damage
+        # fix elytra (0.00231481481 is 1/432. 432 being max elytra durability)
+        # execute store result storage __:elytra Damage float 0.00231481481 run data get entity @s Inventory[{Slot:102b}].components.minecraft:custom_data.__prev_damage
+
+        # get and convert durability to value between 0.0 and 1.0
+        execute store result score __ __temp1 run data get entity @s Inventory[{Slot:102b}].components.minecraft:custom_data.__prev_damage
+        scoreboard players set __ __temp2 432
+        scoreboard players operation __ __temp2 -= __ __temp1
+        # 0.00231481481 is 1/432. i rounded down to 0.00231347832 because rounding errors were causing the elytra to repair
+        execute store result storage __:elytra Damage float 0.00231347832 run scoreboard players get __ __temp2
+
+        # update item
         item modify entity @s armor.chest __:save_damage
         item modify entity @s armor.chest __:clear_lore
         item modify entity @s armor.chest __:set_not_repairable

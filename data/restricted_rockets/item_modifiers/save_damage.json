@@ -1,14 +1,8 @@
 {
-    "function": "copy_nbt",
-    "source": {
+    "function": "set_damage",
+    "damage": {
         "type": "storage",
-        "source": "restricted_rockets:elytra"
-    },
-    "ops": [
-        {
-            "source": "Damage",
-            "target": "Damage",
-            "op": "replace"
-        }
-    ]
+        "storage": "restricted_rockets:elytra",
+        "path": "Damage"
+    }
 }
