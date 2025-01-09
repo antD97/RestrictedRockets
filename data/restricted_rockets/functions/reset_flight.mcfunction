@@ -29,9 +29,6 @@ execute as @s[scores={__time_since_cancelled=4..}] run function __:reset_flight/
     execute store result score __ __temp1 run data get entity @s Inventory[{Slot:102b}].components.minecraft:custom_data.__repairable
     execute if score __ __temp1 matches 1 run function __:reset_flight/time_passed/repairable
     {
-        # fix elytra (0.00231481481 is 1/432. 432 being max elytra durability)
-        # execute store result storage __:elytra Damage float 0.00231481481 run data get entity @s Inventory[{Slot:102b}].components.minecraft:custom_data.__prev_damage
-
         # get and convert durability to value between 0.0 and 1.0
         execute store result score __ __temp1 run data get entity @s Inventory[{Slot:102b}].components.minecraft:custom_data.__prev_damage
         scoreboard players set __ __temp2 432
