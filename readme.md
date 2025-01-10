@@ -1,10 +1,13 @@
 # Restricted Rockets
 
-[Modrinth](https://modrinth.com/datapack/restricted-rockets) |
-[Planet Minecraft](https://www.planetminecraft.com/data-pack/restricted-rockets-5611086) |
-[CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/restricted-rockets) |
-[Video Demo](https://www.youtube.com/watch?v=NgfgBuMwCS0) |
-[Downloads](https://github.com/antD97/RestrictedRockets/releases)
+[![YouTube Demo](https://img.shields.io/youtube/views/NgfgBuMwCS0?style=flat&logo=youtube&label=demo)](https://www.youtube.com/watch?v=NgfgBuMwCS0)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/antD97/RestrictedRockets/total?logo=github)](https://github.com/antD97/RestrictedRockets/releases)
+[![GitHub Repo stars](https://img.shields.io/github/stars/antD97/ShorthandCommands?style=flat&logo=github)](https://github.com/antD97/RestrictedRockets/stargazers)
+[![Discord](https://img.shields.io/discord/1327005882113986772?logo=discord&label=discord)](https://discord.gg/kqQQkGVh)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/antd_)
+[![Modrinth](https://img.shields.io/modrinth/dt/restricted-rockets?logo=modrinth&label=modrinth)](https://modrinth.com/datapack/restricted-rockets)
+[![Planet Minecraft](https://img.shields.io/badge/planet_minecraft-blue)](https://www.planetminecraft.com/data-pack/restricted-rockets-5611086/)
+[![CurseForge](https://img.shields.io/badge/curseforge-orange)](https://www.curseforge.com/minecraft/texture-packs/restricted-rockets)
 
 Restricted Rockets is a [Minecraft](https://www.minecraft.net) datapack that restricts how many rockets players can use
 while flying with an elytra before having to land again. Once a player uses more than the maximum amount of rockets,
